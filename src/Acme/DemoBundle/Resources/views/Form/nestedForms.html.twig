@@ -2,11 +2,18 @@
     {{ form_row(form.label) }}
 
     <h3>Bs</h3>
-    <ul class="bs">
+    <ol class="bs">
         {% for b in form.bs %}
             <li>{{ form_row(b.label) }}</li>
+
+            <h4>Cs</h4>
+            <ol class="cs">
+                {% for c in b.cs %}
+                    <li> {{ form_row(c.label) }}</li>
+                {% endfor %}
+            </ol>
         {% endfor %}
-    </ul>
+    </ol>
 
     <input type="submit" />
 {{ form_end(form) }}

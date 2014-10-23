@@ -5,10 +5,10 @@ namespace Acme\DemoBundle\Model;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Class: A
+ * Class: C
  *
  */
-class A
+class C
 {
     /**
      * label
@@ -18,26 +18,10 @@ class A
     protected $label;
 
     /**
-     * bs
-     *
-     * @var B[]
-     */
-    protected $bs;
-
-    /**
-     * __construct
-     *
-     */
-    public function __construct()
-    {
-        $this->bs = new ArrayCollection();
-    }
-
-    /**
      * Set label
      *
      * @param string $label
-     * @return A
+     * @return C
      */
     public function setLabel($label)
     {
@@ -54,15 +38,5 @@ class A
     public function getLabel()
     {
         return $this->label;
-    }
-
-    /**
-     * Get bs
-     *
-     * @return B[]
-     */
-    public function getBs()
-    {
-        return $this->bs;
     }
 }

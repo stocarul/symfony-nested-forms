@@ -7,11 +7,11 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * Class: BType
+ * Class: CType
  *
  * @see AbstractType
  */
-class BType extends AbstractType
+class CType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -20,9 +20,6 @@ class BType extends AbstractType
     {
         $builder
             ->add('label')
-            ->add('cs', 'collection', array(
-                'type' => new CType(),
-            ))
         ;
     }
 
@@ -32,7 +29,7 @@ class BType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Acme\DemoBundle\Model\B',
+            'data_class' => 'Acme\DemoBundle\Model\C',
         ));
     }
 
@@ -41,6 +38,6 @@ class BType extends AbstractType
      */
     public function getName()
     {
-        return 'form_b';
+        return 'form_c';
     }
 }
