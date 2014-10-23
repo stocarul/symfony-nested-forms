@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    {{ form_row(form.label) }}
+
+    <h3>Bs</h3>
+    <ul class="bs">
+        {% for b in form.bs %}
+            <li>{{ form_row(b.label) }}</li>
+        {% endfor %}
+    </ul>
+
+    <input type="submit" />
+{{ form_end(form) }}

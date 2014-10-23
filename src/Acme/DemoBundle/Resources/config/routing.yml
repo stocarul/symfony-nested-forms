@@ -2,6 +2,10 @@ _welcome:
     path:     /
     defaults: { _controller: AcmeDemoBundle:Welcome:index }
 
+_forms:
+    resource: "@AcmeDemoBundle/Controller/FormController.php"
+    type:     annotation
+
 _demo_secured:
     resource: "@AcmeDemoBundle/Controller/SecuredController.php"
     type:     annotation
